@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
+const dbConnect = require('./db/dbConnect');
 
 // body parser configuration
 app.use(bodyParser.json());
@@ -13,3 +14,4 @@ app.get("/", (request, response, next) => {
 
 
 module.exports = app;
+dbConnect();
